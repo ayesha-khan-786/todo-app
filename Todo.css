@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2rem;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 15px;
+}  
+
+
+body {
+    font-family: "Jost", sans-serif;
+    background: url("background.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;   
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+
+}
+
+.todo-app {
+    width: 50%;
+    height: 80%;
+    padding: 2rem;
+    border-radius: 5px;
+    border-width: 50%;
+    box-shadow: 0 15px 30px rgba(197, 79, 79, 0.3);
+    border: 3px solid rgba(rgb(188, 88, 88), 0, 0, 0.18);
+}
+
+.newtask input {
+    border-radius: 5px;
+    width: 60%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid red;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 500;
+    position: relative;
+}
+
+.newtask #task-input {
+   padding: 10px;
+   font-size: 1.1rem;
+   border-radius: 22px;
+   background: rgba(247, 178, 196, 0.3);
+   color: #dbdbdb;
+
+}
+
+.newtask button {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 22px;
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+.newtask button:hover {
+    background-color: #e7883f;
+}
+
+.container .todos-container {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+
+.todos-container li {
+    color: aliceblue;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Button */
+
+.todos-container .delete {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+
+.todos-container .delete::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* glow */
+.todos-container .delete::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000, #ef426e, #ff3c38, #e58810,
+        #ff416c, #ff1744 , #ff00c8, #e53935
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}
+
+/* hover */
+
+.todos-container .delete:hover::before {
+    opacity: 1;
+}
+
+.todos-container .delete:active:after {
+    background: transparent;
+}
+
+.todos-container .delete:active {
+    color: #ff0000;
+    font-weight: bold;
+}
