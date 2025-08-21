@@ -161,3 +161,24 @@ body {
     color: #ff0000;
     font-weight: bold;
 }
+
+@media (max-width: 480px) {
+h1 {
+    font-size: 22px;
+    text-align: center;
+    }
+.todos-contaier {
+    width: 95%;
+    margin: auto;
+}
+input, button {
+    width: 90%;
+    font-size: 14px;
+    padding: 8px;
+    margin: 8px auto;
+}
+.task {
+    font-size: 14px;
+    padding: 8px;
+}
+}
