@@ -162,24 +162,54 @@ body {
     font-weight: bold;
 }
 
-@media (max-width: 480px) {
-h1 {
-    font-size: 22px;
-    text-align: center;
-    }
-
-.todos-container {
-    width: 95%;
-    margin: auto;
-}
-input, button {
+@media (max-width: 768px) {
+.todo-app {
     width: 90%;
+    height: auto;
+    padding: 1rem;
+}
+.newtask input {
+    width: 100%;
     font-size: 14px;
-    padding: 8px;
-    margin: 8px auto;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.newtask button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+}
+.todos-container li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px;
+}
+.todos-container .delete {
+    font-size: 13px;
+    align-items: flex-end;
+    padding: 6px 12px;
+}
+}
+
+@media (max-width: 480px){
+h1{
+    font-size: 20px;
+    text-align: center;
+}
+.todo-app {
+    width: 95%;
+    height: auto;
+    padding: 1rem;
+}
+.newtask input,
+.newtask button {
+    width: 100%;
+    font-size: 14px;
+    margin: 6px 0;
 }
 .task {
-    font-size: 14px;
-    padding: 8px;
+    font-size: 13px;
+    padding: 6px;
 }
 }
