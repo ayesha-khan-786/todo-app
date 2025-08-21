@@ -164,32 +164,32 @@ body {
 
 @media (max-width: 768px) {
 .todo-app {
-    width: 90%;
+    width: 85%;
     height: auto;
     padding: 1rem;
 }
+ .newtask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 .newtask input {
-    width: 100%;
+    width: 65%;
     font-size: 14px;
     height: 40px;
-    margin-bottom: 10px;
 }
 .newtask button {
-    width: 100%;
+    width: 30%;
+    font-size: 14px;
+    height: 40px;
+}
+.todos-container li {
     font-size: 14px;
     padding: 10px;
 }
-.todos-container li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 10px;
-}
-.todos-container .delete {
-    font-size: 13px;
-    align-items: flex-end;
-    padding: 6px 12px;
-}
+
 }
 
 @media (max-width: 480px){
@@ -202,14 +202,29 @@ h1{
     height: auto;
     padding: 1rem;
 }
-.newtask input,
-.newtask button {
-    width: 100%;
-    font-size: 14px;
-    margin: 6px 0;
+
+.newtask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
 }
-.task {
+.newtask input {
+    width: 65%;
     font-size: 13px;
-    padding: 6px;
+    height: 38px;
+}
+.newtask button {
+    width: 30%;
+    font-size: 13px;
+    height: 38px;
+}
+.todos-container li {
+    font-size: 13px;
+    padding: 8px;
+}
+.todos-container .delete {
+    font-size: 12px;
+    padding: 5px 10px;
 }
 }
