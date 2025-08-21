@@ -167,6 +167,11 @@ h1 {
     font-size: 22px;
     text-align: center;
     }
+.todo-app {
+        width: 95%;
+        height: auto;
+        padding: 1rem;
+    }
 .todos-container {
     width: 95%;
     margin: auto;
