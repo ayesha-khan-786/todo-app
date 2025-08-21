@@ -164,7 +164,7 @@ body {
 
 @media (max-width: 768px) {
 .todo-app {
-    width: 85%;
+    width: 90%;
     height: auto;
     padding: 1rem;
 }
@@ -173,12 +173,11 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
 }
 .newtask input {
     width: 65%;
     font-size: 14px;
-    height: 40px;
+    height: 38px;
 }
 .newtask button {
     width: 30%;
@@ -202,29 +201,12 @@ h1{
     height: auto;
     padding: 1rem;
 }
-
-.newtask {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-}
 .newtask input {
     width: 65%;
     font-size: 13px;
-    height: 38px;
 }
 .newtask button {
     width: 30%;
     font-size: 13px;
-    height: 38px;
-}
-.todos-container li {
-    font-size: 13px;
-    padding: 8px;
-}
-.todos-container .delete {
-    font-size: 12px;
-    padding: 5px 10px;
 }
 }
