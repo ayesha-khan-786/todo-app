@@ -206,9 +206,11 @@ h1{
 .newtask input {
     width: 65%;
     font-size: 13px;
+    text-align: center;
 }
 .newtask button {
     width: 30%;
     font-size: 13px;
+    text-align: center;
 }
 }
